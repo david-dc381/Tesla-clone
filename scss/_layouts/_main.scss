@@ -3,7 +3,7 @@
 
 main {
   // esto es para que se vaya hacia la izquierda y no lo tape el sidebar
-  margin-left: 20%;
+  // margin-left: 20%;
 
   @include tablet {
     margin-left: 0;

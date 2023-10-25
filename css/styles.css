@@ -86,7 +86,6 @@ a {
 }
 .header .logo {
   width: 20%;
-  margin-left: 10%;
   text-align: center;
 }
 .header .logo img {
@@ -150,6 +149,7 @@ nav {
   cursor: pointer;
   color: #171a20;
   font-weight: 700;
+  z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .menu-hamburguer {
@@ -174,9 +174,6 @@ nav {
   }
 }
 
-main {
-  margin-left: 20%;
-}
 @media screen and (max-width: 768px) {
   main {
     margin-left: 0;
@@ -259,7 +256,6 @@ main .subtitle-model span:hover::after {
 }
 
 .sidebar {
-  background-color: #fff;
   width: 20%;
   height: 100%;
   position: fixed;
@@ -267,6 +263,11 @@ main .subtitle-model span:hover::after {
   z-index: 10;
   transition: all 0.3s ease-in;
   overflow-y: auto;
+  margin-left: -23%;
+  background: rgba(255, 255, 255, 0.842);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 @media screen and (max-width: 768px) {
   .sidebar {

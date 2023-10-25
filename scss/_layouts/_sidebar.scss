@@ -2,7 +2,6 @@
 @use '../_mixins/devices' as *;
 
 .sidebar {
-  background-color: $color-white;
   width: 20%;
   height: 100%;
   position: fixed;
@@ -10,6 +9,12 @@
   z-index: 10;
   transition: all .3s ease-in;
   overflow-y: auto;
+  margin-left: -23%;
+
+  background: rgba(255, 255, 255, 0.842);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
 
   // Media-Queries
   @include tablet {
