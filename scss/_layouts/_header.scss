@@ -1,0 +1,102 @@
+@use '../_variables/_variables' as *;
+@use '../_mixins/devices' as *;
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+
+  .logo {
+    width: 20%;
+    margin-left: 10%;
+    text-align: center;
+
+    img {
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    // estilos tablet
+    @include tablet {
+      margin-left: 0;
+      width: 50%;
+    }
+
+    // estilos smartphone-medium
+    @include smartphone-medium {
+      margin-left: 45%;
+      width: 40%;
+      margin-top: -2%;
+    }
+    
+    // estilos smartphone
+    @include smartphone {
+      margin-left: 45%;
+      width: 40%;
+      margin-top: -2%;
+    }
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav-list {
+  display: flex; 
+  
+  a {
+    color: $color-secondary;
+    font-weight: 700;
+    font-size: .9rem;
+    padding: 5px 20px;
+    border-radius: 15px;
+    transition: all .3s ease-out;
+  
+  
+    &:hover {
+      background-color: #f1f1f1b8;
+      transition: all .3s ease-in;
+    }
+  }
+}
+
+/* Menu Hamburguer */
+.menu-hamburguer {
+  display: none;
+  cursor: pointer;
+  color: $color-primary;
+  font-weight: 700;
+
+  @include tablet {
+    display: block;
+    left: 5%;
+    position: absolute;
+    top: 33%;
+    background-color: #f1f1f157;
+    padding: 1% 2%;
+    border-radius: 15px;
+    transition: all .3s ease-out;
+
+    &:hover {
+      background-color: #f1f1f1c7;
+      transition: all .3s ease-in;
+    }
+  }
+
+  @include smartphone-medium {
+    top: 20%;
+    padding: 2% 4%;
+  }
+}

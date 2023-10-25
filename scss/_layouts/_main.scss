@@ -1,0 +1,79 @@
+@use '../_variables/variables' as *;
+@use  '../_mixins/devices' as *;
+
+main {
+  // esto es para que se vaya hacia la izquierda y no lo tape el sidebar
+  margin-left: 20%;
+
+  @include tablet {
+    margin-left: 0;
+  }
+
+
+  .model {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 6rem;
+
+    // un padding a cada model
+    @include smartphone-medium {
+      padding-bottom: 25%;
+    }
+
+    // le damos distintas medidas y posiciones a los backgrounds
+    @include smartphone {
+      background-size: 274% 100%;
+      background-position: 44%;
+    }
+  }
+
+  // Recorremos cada imagen de fondo de cada modelo de auto
+  @each $image, $value in $images-background {
+    .model-#{$image} {
+      background-image: #{$value};
+    }
+  }
+
+  .title-model, .subtitle-model {
+    text-align: center;
+    color: $color-primary;
+  }
+  .title-model {
+    font-size: 2.7rem;
+
+    @include tablet {
+      margin-top: 2rem;
+    }
+  }
+  .subtitle-model {
+    line-height: 2.2rem;
+
+    span {
+      cursor: pointer;
+      
+      &::after {
+        content: "";
+        width: 130px;
+        height: 1px;
+        background-color: $color-secondary;
+        display: block;
+        margin-left: 49.5%;
+        margin-top: -7px;
+        transition: all .3s ease-in;
+      }
+      &:hover {
+        transition: all .3s ease-out;
+        &::after {
+          content: "";
+          width: 130px;
+          height: 1.4px;
+          background-color: $color-secondary;
+          display: block;
+        }
+      }
+    }
+  }
+}

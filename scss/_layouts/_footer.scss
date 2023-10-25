@@ -1,0 +1,58 @@
+@use '../_variables/variables' as *;
+@use '../_mixins/devices' as *;
+
+footer {
+  margin-left: 20%;
+  display: flex;
+  padding: 1.8% 0;
+  text-align: center;
+
+  @include tablet {
+    margin-left: 0;
+    font-size: .8rem;
+  }
+  
+  .footer-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    li {
+      margin: 0 20px;
+      cursor: pointer;
+      span {
+        color: $color-secondary;
+      }
+    }
+
+    @include tablet {
+      width: 80%;
+      font-size: .6rem;
+
+      li {
+        margin: 0 10px;
+      }
+    }
+
+    @include smartphone-medium {
+      display: block;
+      font-size: .8rem;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+    
+    @include smartphone {
+      display: block;
+      font-size: .8rem;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+/* Colors */
+$color-primary: #171a20;
+$color-secondary: #393c41;
+$color-white: #fff;
+
+/* Images */
+$images-background: (
+  's': url('../img/model-s.jpg'),
+  '3': url('../img/model-3.jpg'),
+  'x': url('../img/model-x.jpg'),
+  'y': url('../img/model-y.jpg'),
+  'solar-roof': url('../img/roof.jpg'),
+  'solar-panels': url('../img/solar-panel.jpg'),
+);
+
+/* Buttons */
+$btn-dark: rgb(23 26 32 / 80%);
+$btn-ligth: rgb(244 244 244 / 65%);
+
